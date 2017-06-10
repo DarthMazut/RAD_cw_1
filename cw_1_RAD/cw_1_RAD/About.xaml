@@ -1,0 +1,37 @@
+﻿<Window x:Name="xe_Window" x:Class="cw_1_RAD.About"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cw_1_RAD"
+        mc:Ignorable="d"
+        Title="O aplikacji" Height="500" Width="650" ResizeMode="NoResize" Icon="img/hint.png" WindowStyle="None" MouseLeftButtonDown="em_Window_OnClick" BorderBrush="RoyalBlue" BorderThickness="1">
+    <Grid x:Name="xe_MainGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="xe_Logo" HorizontalAlignment="Center" Height="128" Margin="0,0,0,125" VerticalAlignment="Center" Width="128" Source="img/WIiNoM_small.png"/>
+        <TextBlock x:Name="xe_TextBlock_Logo" HorizontalAlignment="Center" Margin="5,125,5,0" TextWrapping="Wrap" Text="Wydział Informatyki i Nauki o Materiałach" VerticalAlignment="Center" FontFamily="Comic Sans MS" FontSize="24" Foreground="#FF505050"/>
+        <Button x:Name="xe_ButtonClose" Content="Zamknij" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="150" Height="40" FontSize="18.667" Click="em_Close_OnClick"/>
+        <ScrollViewer x:Name="xe_ScrollViewer" Grid.Column="1" Margin="10,10,10,70" VerticalScrollBarVisibility="Auto">
+            <TextBlock x:Name="xe_TextBlock_Opis" TextWrapping="Wrap"  FontSize="16" FontFamily="Segoe Print" MouseLeftButtonDown="em_TextBlock_OnClick">
+                Niniejsza aplikacja zostałą stworzona jako jeden z projektów na zaliczenie przedmiotu "Programowanie w środowiskach RAD". 
+                <LineBreak/><LineBreak/>
+                Aplikacja pozwala na walidację numerów kart kredytowych następujących marek:<LineBreak/>
+                - Visa<LineBreak/>
+                - Master Card<LineBreak/>
+                - American Express<LineBreak/>
+                - Diners Club<LineBreak/>
+                - Discover<LineBreak/>
+                - JCB<LineBreak/>
+                Regex'y do tych numerów zaczerpniętu z: http://www.regular-expressions.info/creditcard.html.
+                <LineBreak/><LineBreak/>
+                Aplikacja ma stylowe animacje i nowoczesny wygląd. Powinna się podobać.
+                <LineBreak/><LineBreak/>
+                Jedna z ikon jest w wersji linkver, tak więc: http://newidols.ru
+            </TextBlock>
+        </ScrollViewer>
+
+    </Grid>
+</Window>
